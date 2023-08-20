@@ -16,7 +16,7 @@ public class Main {
 /*things to get done will be written below */
 
 // in Task class, create a way to undo the "done" option
-// adjust colors
+// adjust colors, have option to change within program
 
 // can save progress
 // can import and export list
