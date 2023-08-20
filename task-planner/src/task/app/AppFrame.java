@@ -2,7 +2,6 @@ package task.app;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
@@ -40,7 +39,7 @@ public class AppFrame extends JFrame {
         newTask.addMouseListener(new MouseAdapter() {
             @override
             public void mousePressed(MouseEvent e) {
-            	if (e.getButton() == MouseEvent.BUTTON1) {
+            	if (e.getButton() == MouseEvent.BUTTON1) { //left click 
 	                Task task = new Task();
 	                list.add(task); // Add new task to list
 	                list.updateNumbers(); // Updates the numbers of the tasks
@@ -48,7 +47,7 @@ public class AppFrame extends JFrame {
 	                task.getDone().addMouseListener(new MouseAdapter() {
 	                    @override
 	                    public void mousePressed(MouseEvent e) {
-	                    	if (e.getButton() == MouseEvent.BUTTON1) {
+	                    	if (e.getButton() == MouseEvent.BUTTON1) { //left click 
 	                    		 task.changeState(); // Change color of task
 	                             list.updateNumbers(); // Updates the numbers of the tasks
 	                             revalidate(); // Updates the frame
@@ -63,7 +62,7 @@ public class AppFrame extends JFrame {
         clear.addMouseListener(new MouseAdapter() {
             @override
             public void mousePressed(MouseEvent e) {
-            	if (e.getButton() == MouseEvent.BUTTON1) {
+            	if (e.getButton() == MouseEvent.BUTTON1) { //left click 
 	                list.removeCompletedTasks(); // Removes all tasks that are done
 	                repaint(); // Repaints the list
             	}
