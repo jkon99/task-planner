@@ -15,6 +15,7 @@ public class AppFrame extends JFrame {
 
     private JButton newTask;
     private JButton clear;
+    // private JButton undo;
 
     AppFrame() {
         this.setSize(400, 600); // 400 width and 600 height
@@ -39,20 +40,22 @@ public class AppFrame extends JFrame {
         newTask.addMouseListener(new MouseAdapter() {
             @override
             public void mousePressed(MouseEvent e) {
-                Task task = new Task();
-                list.add(task); // Add new task to list
-                list.updateNumbers(); // Updates the numbers of the tasks
-
-                task.getDone().addMouseListener(new MouseAdapter() {
-                    @override
-                    public void mousePressed(MouseEvent e) {
-
-                        task.changeState(); // Change color of task
-                        list.updateNumbers(); // Updates the numbers of the tasks
-                        revalidate(); // Updates the frame
-
-                    }
-                });
+            	if (e.getButton() == MouseEvent.BUTTON1) {
+	                Task task = new Task();
+	                list.add(task); // Add new task to list
+	                list.updateNumbers(); // Updates the numbers of the tasks
+	
+	                task.getDone().addMouseListener(new MouseAdapter() {
+	                    @override
+	                    public void mousePressed(MouseEvent e) {
+	                    	if (e.getButton() == MouseEvent.BUTTON1) {
+	                    		 task.changeState(); // Change color of task
+	                             list.updateNumbers(); // Updates the numbers of the tasks
+	                             revalidate(); // Updates the frame
+	                    	}
+	                    }
+	                });
+            	}
             }
 
         });
@@ -60,8 +63,10 @@ public class AppFrame extends JFrame {
         clear.addMouseListener(new MouseAdapter() {
             @override
             public void mousePressed(MouseEvent e) {
-                list.removeCompletedTasks(); // Removes all tasks that are done
-                repaint(); // Repaints the list
+            	if (e.getButton() == MouseEvent.BUTTON1) {
+	                list.removeCompletedTasks(); // Removes all tasks that are done
+	                repaint(); // Repaints the list
+            	}
             }
         });
     }

@@ -54,7 +54,7 @@ public class Task extends JPanel {
 	        this.revalidate(); // refresh
 	    }
 
-	    public JButton getDone() {
+	    public JButton getDone() { 
 	        return done;
 	    }
 
@@ -62,7 +62,7 @@ public class Task extends JPanel {
 	        return checked;
 	    }
 
-	    public void changeState() {
+	    public void changeState() { //make it so you can rechange state, functionality in AppFrame class
 	        this.setBackground(green);
 	        taskName.setBackground(green);
 	        checked = true;
