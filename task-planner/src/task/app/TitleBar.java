@@ -7,7 +7,8 @@ import javax.swing.JPanel;
 import java.awt.Color;
 
 public class TitleBar extends JPanel {
-	  Color lightColor = new Color(252, 221, 176);
+	
+	  	Color lightColor = new Color(252, 221, 176);
 
 	    TitleBar() {
 	        this.setPreferredSize(new Dimension(400, 80)); // Size of the title bar

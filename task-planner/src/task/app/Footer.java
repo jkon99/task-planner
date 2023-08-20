@@ -10,7 +10,8 @@ import javax.swing.border.Border;
 import java.awt.Color;
 
 public class Footer extends JPanel{
-	  JButton addTask;
+	
+	  	JButton addTask;
 	    JButton clear;
 
 	    Color orange = new Color(233, 133, 128);

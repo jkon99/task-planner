@@ -8,7 +8,7 @@ import java.awt.Component;
 
 public class List extends JPanel{
 	
-	  Color lightColor = new Color(252, 221, 176);
+	  	Color lightColor = new Color(252, 221, 176);
 
 	    List() {
 

@@ -10,7 +10,7 @@ import java.awt.Color;
 import java.awt.BorderLayout;
 
 public class Task extends JPanel {
-	  JLabel index;
+	  	JLabel index;
 	    JTextField taskName;
 	    JButton done;
 

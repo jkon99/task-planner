@@ -15,11 +15,12 @@ public class Main {
 
 /*things to get done will be written below */
 
-// in Task class, create a way to undo the "done" option
-// expand size of list, have scroll bar
+// create undo/redo commands
 
-//adjust colors, have option to change within program by right clicking background and buttons
-//would have to make variables for colors public, make more
+// adjust colors, have option to change within program by right clicking background and buttons
+// would have to make variables for colors public, make more
 
 // can save progress
 // can import and export list
+// expand size of list, have scroll bar. Not necessary but will look nicer
+// set everything to done option
